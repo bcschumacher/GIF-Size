@@ -1,0 +1,20 @@
+.search {
+    border-radius: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 90%;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.search__container {
+    width: 100%;
+}
+
+@media screen and (max-width: 2500px) {
+    .search__container {
+        margin-top: 2rem;
+    }
+}

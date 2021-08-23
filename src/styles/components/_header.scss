@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.header {
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    display: flex;
+    flex: 1 0 10%;
+    height: auto;
+    justify-content: center;
+    overflow: visible;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 2em;
+    position: sticky;
+    text-align: left;
+    top: 0;
+    width: auto;
+    z-index: 2;
+}
+
+.header__about {
+    color: white;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    justify-content: center;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.header__about:hover {
+    text-decoration: underline;
+}
+
+.header__divider {
+    background: white;
+    display: flex;
+    font-family: 'Roboto';
+    height: 90%;
+    width: 2px;
+}
+
+.header__divider__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem; 
+}
+
+.header__hero {
+    color: white;
+    display: flex;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.header__logo {
+    float: left;
+    height: 150px;
+    margin-right: $s-size;
+    text-align: center;
+    width: 150px;
+}
+
+.header__logocontainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.header__search {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    justify-content: center;
+    width: 100%;
+}
+
+.header__sort__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header__subtitle {
+    font-family: 'Roboto';
+    font-size: 20px;
+    margin: 2px;
+}
+
+.header__subtitle__bigger {
+    font-family: 'Roboto';
+    font-size: 25px;
+    margin: 0;
+}
+
+.header__title {
+    margin: 10px;
+    white-space: nowrap;
+}
+
+.header__titlebox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.css-2b097c-container {
+    border-radius: 45px;
+}
+
+@media screen and (max-width: 2500px) {
+    .header__about {
+        display: none;
+    }
+    
+    .header__divider {
+        display: none;
+    }
+    
+    .header__hero {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header__img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 2500px) {
+    .header__hero {
+        font-size: 15px;
+    }
+}
