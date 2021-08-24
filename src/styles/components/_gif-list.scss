@@ -1,3 +1,6 @@
+
+// Styling that allows for GIFs to load in left to right - all new gifs are inserted at the bottom
+// Previously display inline block and column count but this lead to images loading down the page and reshuffling when more were added
 .gif-list {
     display: grid;
     grid-gap: 2em;
@@ -9,6 +12,7 @@
     margin-bottom: 2em;
 }
 
+//Media query to decrease margins on smaller screens
 @media screen and (max-width: 1700px) {
     .gif-list {
         margin-left: 2em;

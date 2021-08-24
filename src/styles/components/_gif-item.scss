@@ -1,14 +1,14 @@
 .gif-item {
-    
     box-sizing: border-box;
     display: inline-block;
     opacity: 0;
     overflow: visible;
     animation: scale-in-center 0.5s;
-    animation-delay: 0.5s;
+    animation-delay: 0.8s;
     animation-fill-mode: forwards;
 }
 
+// GIF load in animation
 @keyframes scale-in-center {
     0% {
       -webkit-transform: scale(0);
@@ -31,6 +31,7 @@
     transition: all 0.3s ease-in-out;
 }
 
+// GIF hover animation
 .gif-item img:hover {
     box-shadow: 0px 8px 15px black;
     cursor: pointer;

@@ -1,3 +1,5 @@
+
+//Fonts to be used in header
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
@@ -76,8 +78,6 @@
     text-align: center;
 }
 
-
-
 .header__search {
     display: flex;
     flex-direction: column;
@@ -121,6 +121,7 @@
     border-radius: 45px;
 }
 
+//Stacks header for smaller screens and removes scroll to top button and dividers
 @media screen and (max-width: 1700px) {
     .header__about {
         display: none;

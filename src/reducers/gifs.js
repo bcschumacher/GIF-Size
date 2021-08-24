@@ -1,5 +1,6 @@
 import { INCREASE_OFFSET, REQUEST_GIFS, REQUEST_MORE, SET_TERM } from '../actions';
 
+// Inital state is set to define empty values that the store will track
 const initialState =  {
     data: [],
     offset: 0,
@@ -7,32 +8,26 @@ const initialState =  {
 };
 
 export default function gifs(state = initialState, action) {
+    // Switch to handle actions being passed
     switch (action.type) {
         case REQUEST_GIFS:
+            // Overwrites data with new array of GIFs from api and resets the offset to 0
             return {
-                ...state, data: action.payload.body.data
+                ...state, data: action.payload.body.data, offset: 0
             };
         case REQUEST_MORE:
+            // Concatinates old array of GIFs with new array
             let arr = state.data.concat(action.payload.body.data)
-            
-            let unique = arr.reduce((res, itm) => {
-                // Test if the item is already in the new array
-                let result = res.find(item => JSON.stringify(item) == JSON.stringify(itm))
-                // If not lets add it
-                if(!result) return res.concat(itm)
-                // If it is just return what we already have
-                return res
-            }, [])
-
-
             return {
-                ...state, data: unique
+                ...state, data: arr
             }
         case INCREASE_OFFSET:
+            // Increases the offset by 100 GIFs
             return {
-                ...state, offset: state.offset + 50
+                ...state, offset: state.offset + 100
             };
         case SET_TERM:
+            // Sets the term in state to be used in the API call
             return {
                 ...state, term: action.term
             };

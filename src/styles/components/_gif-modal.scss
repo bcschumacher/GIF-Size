@@ -1,26 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+//Roboto font to be used in modal
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .gifmodal {
+    animation: fade-in 0.6s;
+    animation-fill-mode: both;
     background-color: rgba(0,0,0,0.9);
     bottom: 0;
     cursor: auto;
-    height: auto;
+    height: 100%;
     left: 0;
+    opacity: 0;
     position: fixed;
     right: 0;
     top: 0;
-    width: 100%;
+    width: auto;
     z-index: 3;
+}
+
+//Modal fade in animation
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 .gifmodal__container {
     background-color: #39383D;
     border-radius: 10px;
     color: white;
-    height: 50%;
+    height: 65%;
     left: 50%;
-    padding-bottom: 3em;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -30,7 +43,7 @@
 
 .gifmodal__image {
     border-radius: 10px 10px 0 0;
-    height: 85%;
+    height: 75%;
     width: auto;
 }
 
@@ -40,7 +53,7 @@
     border-radius: 10px;
     color: white;
     cursor: pointer;
-    margin: 1em;
+    margin: 2em;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -62,12 +75,11 @@
     border-radius: 10px;
     color: white;
     cursor: pointer;
-    margin: 1em;
+    margin: 2em;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
 }
 
 .gifmodal__link:hover {
@@ -76,4 +88,26 @@
     transform: scale(1.1);
     transition: all 0.1s ease-in-out;
     z-index: 1;
+}
+
+.gifmodal__logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.gifmodal__size {
+    font-family: 'Roboto';
+    font-size: 40px;
+    margin: 0;
+    overflow-wrap: break-word;
+    padding-top: 1em;
+}
+
+.gifmodal__date {
+    font-family: 'Roboto';
+    margin: 0;
+    overflow-wrap: break-word;
+    padding-top: 1em;
 }

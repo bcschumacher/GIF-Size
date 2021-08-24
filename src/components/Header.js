@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Logo from './Logo';
 import SearchBar from '../components/SearchBar';
 
-
+//Component responsible for managing the header
 const Header = (props) => {
     return (
         <div className="header">
@@ -36,16 +36,21 @@ const Header = (props) => {
     );
 }
 
+// Returns gifs from the store
+// If state item is updated the component re renders itself
 function mapStateToProps(state) {
     return {
         gifs: state.gifs
     };
 }
 
+// Dispatches any actions called in this component to the actions file
 function mapDispatchToProps(dispatch) {
     return {
             actions: bindActionCreators(Actions, dispatch)
         };
-    }
-  
+}
+
+// Connect provides its connected component with the pieces of the data it needs from the store,
+// and the functions it can use to dispatch actions to the reducers.
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

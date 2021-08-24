@@ -8,10 +8,12 @@ import './styles/styles.scss';
 
 const store = configureStore();
 
+// Wraps sore around base component
 const jsx = (
     <Provider store={store}>
         <GIFSizeApp />
     </Provider>
 );
 
+// Responsible for rendering complete application
 ReactDOM.render(jsx, document.getElementById('app'));
