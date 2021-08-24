@@ -1,5 +1,7 @@
 {
+
   "name": "GIFSize",
+  "homepage": "https://bcschumacher.github.io/gif-size/",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Bryce Schumacher",
